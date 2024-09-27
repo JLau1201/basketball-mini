@@ -21,10 +21,10 @@ public class GameOverUI : BaseUI
         Hide();
         restartButton.onClick.AddListener(() => {
             Hide();
-            Loader.Load(Loader.Scene.TimeTrial);
+            SceneManager.LoadScene(0);
         });
         quitButton.onClick.AddListener(() => {
-            Loader.Load(Loader.Scene.MainMenu);
+            Application.Quit();
         });
 
         BasketballGameManager.Instance.OnGameOver += BasketballGameManager_OnGameOver;

@@ -8,7 +8,6 @@ public class PauseMenuUI : BaseUI
 
     [Header("Buttons")]
     [SerializeField] private Button resumeButton;
-    [SerializeField] private Button settingsButton;
     [SerializeField] private Button quitButton;
 
     private void Start() {
@@ -31,13 +30,9 @@ public class PauseMenuUI : BaseUI
             BasketballGameManager.Instance.ToggleGamePause();
         });
 
-        settingsButton.onClick.AddListener(() => {
-        
-        });
 
         quitButton.onClick.AddListener(() => {
-            Loader.Load(Loader.Scene.MainMenu);
+            Application.Quit();
         });
     }
-
 }
